@@ -1,0 +1,118 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (3.2.14)
+      activesupport (= 3.2.14)
+      builder (~> 3.0.0)
+    activerecord (3.2.14)
+      activemodel (= 3.2.14)
+      activesupport (= 3.2.14)
+      arel (~> 3.0.2)
+      tzinfo (~> 0.3.29)
+    activesupport (3.2.14)
+      i18n (~> 0.6, >= 0.6.4)
+      multi_json (~> 1.0)
+    arel (3.0.2)
+    backports (3.3.3)
+    brstring (3.3.0)
+      activesupport (>= 3.0.0)
+    builder (3.0.4)
+    descendants_tracker (0.0.1)
+    diff-lcs (1.2.4)
+    dropbox-sdk (1.6.1)
+      json
+    excon (0.25.3)
+    gcm (0.0.4)
+      httparty
+      json
+    geocoder (1.1.8)
+    grape (0.5.0)
+      activesupport
+      builder
+      hashie (>= 1.2.0)
+      multi_json (>= 1.3.2)
+      multi_xml (>= 0.5.2)
+      rack (>= 1.3.0)
+      rack-accept
+      rack-mount
+      virtus
+    grape-entity (0.3.0)
+      activesupport
+      multi_json (>= 1.3.2)
+    hashie (2.0.5)
+    httparty (0.12.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    i18n (0.6.5)
+    json (1.8.0)
+    mail (2.5.4)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mandrill-api (1.0.44)
+      excon (>= 0.16.0, < 1.0)
+      json (>= 1.7.7, < 2.0)
+    mime-types (1.25)
+    multi_json (1.7.9)
+    multi_xml (0.5.5)
+    pg (0.16.0)
+    polyglot (0.3.3)
+    pony (1.5)
+      mail (> 2.0)
+    pushmeup (0.1.2)
+      httparty
+      json
+    rack (1.5.2)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
+    rack-cors (0.2.8)
+      rack
+    rack-mount (0.8.3)
+      rack (>= 1.0.0)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rest-graph (2.0.3)
+    rspec (2.14.1)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
+    rspec-core (2.14.7)
+    rspec-expectations (2.14.3)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.14.4)
+    time_difference (0.2.0)
+      activesupport
+    treetop (1.4.15)
+      polyglot
+      polyglot (>= 0.3.1)
+    tzinfo (0.3.37)
+    virtus (0.5.5)
+      backports (~> 3.3)
+      descendants_tracker (~> 0.0.1)
+    will_paginate (3.0.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord (~> 3.2.14)
+  brstring
+  dropbox-sdk
+  gcm
+  geocoder
+  grape
+  grape-entity
+  json
+  mandrill-api
+  pg
+  pony
+  pushmeup
+  rack
+  rack-cors
+  rack-test
+  rest-client
+  rest-graph
+  rspec
+  time_difference
+  will_paginate

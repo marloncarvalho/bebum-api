@@ -1,0 +1,1 @@
+Esta é uma API criada com o intuito de exemplificar o uso do Grape com boas práticas na criação de APIs RESTful.
