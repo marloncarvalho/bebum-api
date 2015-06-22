@@ -12,7 +12,7 @@ module API
           tipo.id = 1
           tipo.nome = 'Pilsen'
 
-          [tipo]
+          present [tipo], :with => Entities::Tipo
         end
 
       end
