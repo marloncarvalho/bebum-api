@@ -11,6 +11,7 @@ module API
 
     class Base < Grape::API
       version 'v1', :using => :header, :vendor => 'alienlabz', :format => :json
+      format :json
 
       mount API::V1::Cervejas => '/'
       mount API::V1::Tipos => '/'
