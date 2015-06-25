@@ -1,13 +1,23 @@
+require 'data_mapper'
+
 module Models
 
   # Cervejas.
    class Cerveja
-     attr_accessor :id, :nome, :tipo
+     include DataMapper::Resource
+
+     property :id, Serial
+     property :nome, String
+     belongs_to :tipo
    end
 
   # Tipos de Cervejas
    class Tipo
-     attr_accessor :id, :nome
+     include DataMapper::Resource
+
+     property :id, Serial
+     property :nome, String
+     has n, :cervejas
    end
 
 end

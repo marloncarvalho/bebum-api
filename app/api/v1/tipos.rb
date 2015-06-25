@@ -6,13 +6,33 @@ module API
 
       resources :tipos do
 
-        # Obter uma lista de Tipos de Cervejas
         get do
-          tipo = Models::Tipo.new
-          tipo.id = 1
-          tipo.nome = 'Pilsen'
+          present Models::Tipo.all, :with => Entities::Tipo
+        end
 
-          present [tipo], :with => Entities::Tipo
+        get ':id' do
+          present Models::Tipo.get!(params[:id]), :with => Entities::Tipo
+        end
+
+        post do
+          tipo = Models::Tipo.new
+          tipo.nome = params[:nome]
+          tipo.save
+
+          present tipo, :with => Entities::Tipo
+        end
+
+        put ':id' do
+          tipo = Models::Tipo.get! params[:id]
+          tipo.nome = params[:nome]
+          tipo.save
+
+          present tipo, :with => Entities::Tipo
+        end
+
+        delete ':id' do
+          status 204
+          Models::Tipo.get!(params[:id]).destroy!
         end
 
       end

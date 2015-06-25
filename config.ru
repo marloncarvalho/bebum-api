@@ -6,8 +6,12 @@ require 'rubygems'
 require 'grape'
 require 'rack'
 require 'grape-entity'
-
+require 'data_mapper'
 require 'api/base.rb'
+
+DataMapper.setup(:default, 'mysql://root:serpro123@localhost/bebumapi')
+DataMapper::auto_migrate!
+DataMapper::finalize
 
 use Rack::Cors do
   allow do
