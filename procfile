@@ -1,1 +1,14 @@
-web: bundle exec rackup config.ru -p $PORT
+FROM dockerfile/ruby
+
+ADD Gemfile /app/
+ADD Gemfile.lock /app/
+RUN bundle install
+ADD . /app
+
+WORKDIR /app
+
+ENV APPSERVER webrick
+
+CMD bundle exec rackup -p 5000 /app/config.ru -s $APPSERVER
+
+EXPOSE 8080

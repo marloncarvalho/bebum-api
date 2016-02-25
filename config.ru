@@ -9,7 +9,7 @@ require 'grape-entity'
 require 'data_mapper'
 require 'api/base.rb'
 
-DataMapper.setup(:default, 'mysql://root:serpro123@localhost/bebumapi')
+DataMapper.setup(:default, 'mysql://serpro:serpro@db/bebumapi')
 DataMapper::auto_migrate!
 DataMapper::finalize
 

@@ -4,7 +4,7 @@ module API
 
       resources :cervejas do
         get do
-          'Lista de Cervejas.'
+          'Lista de asdfasdfasdfasdfsd.' 
         end
       end
 
